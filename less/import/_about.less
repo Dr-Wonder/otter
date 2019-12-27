@@ -1,0 +1,129 @@
+.wrapp-about {
+    width: 100%;
+    height: 100%;
+}
+
+.about {
+    margin: auto;
+    width: 1140px;
+    height: 530px;
+}
+
+.aboutUsModal {
+    width: 200px;
+    height: 50px;
+    border: 1px solid @pink-btn;
+    background: #fff;
+    color: #333333;
+    border-radius: 25px;
+    &:hover {
+        cursor: pointer;
+        transition:  0.5s;
+    }
+    &:focus {
+     outline: none;
+    }
+}
+
+// instagram
+.inst-link {
+    width: 100%;
+    height: 530px;
+    text-decoration: none;
+    color: @text;
+    &-logo {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &-title {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-img {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+}
+
+//About us text
+.about-us {
+    width: 100%;
+    height: 530px;
+    &-title {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+    }
+    &-text {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+    &-Btn {
+        width: 100%;
+        height: 50px;
+        padding-left: 20px;
+    }
+} 
+
+// Media Queries
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .about {
+        width: 1200px;
+    }
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .about {
+        width: 750px;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .about {
+        width: 700px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media  (max-width: 575.98px) {
+    .about {
+        width: 100%;
+        height: 1100px;
+    }
+    .about-us {
+        &-title {
+            padding-left: 0;
+        }
+        &-text {
+            padding-left: 0;
+            height: 600px;
+        }
+        &-Btn {
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .inst-link {
+        height: 450px;
+        &-title {
+            height: 70px;
+        }
+    }
+}

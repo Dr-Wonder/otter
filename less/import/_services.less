@@ -1,0 +1,277 @@
+.row {
+    margin-top: 30px;
+}
+.services-wrapp {
+    width: 100%;
+    background-color: #ffffff;
+    height: 100%;
+}
+.services {
+    margin: 0 auto;
+    width: 1140px;
+    height: 100%;
+    background-color: #fff;
+    &-title {
+        margin-top: 30px;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-pages {
+        width: 100%;
+        height: 750px;
+    }
+    &-card {
+        position: relative;
+        width: 360px;
+        height: 360px;
+        &-window {
+            position:absolute;
+            left:0;
+            bottom:0;
+            right:0;
+            top:0;
+            background:rgba(0, 0, 0, 0.5);
+            padding-top: 35%;
+            display:none;
+            transition: 0.6s;
+        }
+    }
+    &-buttons {
+        width: 100%;
+        height: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.feedback {
+    height: 220px;
+    width: 250px;
+    &-link {
+        display: block;
+        height: 60px;
+        width: 250px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: @pink-btn;
+        color: #fff;
+        text-decoration: none;
+        box-shadow: 0px 0px 10px rgba(130, 130, 130, 0.39);
+        transition:  0.5s; 
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0px 4px 20px rgba(56, 56, 56, 0.39); 
+            transition:  0.5s;
+        }
+    }
+    &-btn {
+        width: 250px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    &-number {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 250px;
+        height: 60px;
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(130, 130, 130, 0.39);
+        padding-left: 20px;
+        padding-right: 30px;
+        transition:  0.5s;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0px 4px 20px rgba(56, 56, 56, 0.39); 
+            transition:  0.5s;
+        }
+    }
+    &-messengers {
+        margin: auto;
+        margin-top: 30px;
+        width: 230px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+// Services card 
+.services-card:hover .services-card-window {
+    display: block;
+    cursor: pointer;
+}
+.adaptive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+// Services link button
+.window {
+    margin: auto;
+    width: 200px;
+    height: 130px;
+    &-title {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-button {
+        width: 100%;
+        height: 50px;
+    }
+}
+.window-btn {
+    display: block;
+    height: 50px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:#333333;
+    &:hover{
+        text-decoration: none;
+        color: #333333;
+    }
+}
+
+.tab-new {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: flex;
+    background-color: @home-btn;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #fff;
+}
+
+// Media Queries
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .services {
+        margin: auto;
+        width: 992px;
+        &-pages {
+            height: 650px;
+        }
+        &-card {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .services {
+        width: 768px;
+        height: 800px;
+        &-pages {
+            height: 500px;
+        }
+        &-card {
+            width: 220px;
+            height: 220px;
+        }
+    }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .row {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .col {
+        margin-top: 30px;
+        padding: 0;
+    }
+    .services-wrapp {
+        width: 100%;
+        height: 2400px;
+    }
+    
+    .services {
+        width: 767px;
+        height: 2000px;
+        &-pages {
+            height: 2000px;
+        }
+        &-card {
+            margin: auto;
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .tab-new {
+        z-index: 3;
+    }
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .col {
+        margin-top: 30px;
+        padding: 0;
+    }
+    .services-wrapp {
+        width: 100%;
+        height: 100%;
+    } 
+    .services {
+        width: 100%;
+        height: 2270px;
+        &-pages {
+            height: 1950px;
+        }
+        &-card {
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            &-window {
+                display: block;
+            }
+        }
+        &-buttons {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

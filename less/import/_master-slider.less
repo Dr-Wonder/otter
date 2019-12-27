@@ -1,0 +1,206 @@
+.wrapp-masters__slider {
+    width: 100%;
+    height: 100%;
+    background-color: @masters-bg;
+}
+
+.master-slide {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapp-master-card {
+    width: 400px;
+    height: 100%;
+    &:focus {
+        outline: none;
+    }
+}
+
+.master-card {
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #E5E5E5;
+    background-color: #fff;
+    &-header {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // &__img {
+        //     width: 130px;
+        //     height: 130px;
+        // }
+    }
+    &-text {
+        width: 100%;
+        height: 90px;
+        &__name {
+            height: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__profile {
+            height: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__work {
+            height: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &-buttons{
+        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.masterInfo {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    background-color: #fff;
+    &-btn {
+        width: 130px;
+        height: 30px;
+        border: 1px solid @home-btn;
+        background-color: #fff;
+        border-radius: 5px;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(38, 166, 153, 0.100);
+        }
+    }
+    &-link {
+        width: 130px;
+        height: 30px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        border: 1px solid @home-btn;
+        background-color: #fff;
+        border-radius: 5px;
+        &:hover {
+            cursor: pointer;
+            color: #000000;
+            background-color: rgba(38, 166, 153, 0.100);
+        }
+    }
+}
+
+.wrapp-masters-slideButton {
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.masters-slideButton {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideButton {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    opacity: 0.5;
+    transition: all 0.4s;
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+// Media Queries
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .master-slide {
+        width: 960px;
+    }
+    .masters-slideButton {
+        width: 960px;
+        margin: auto;
+    }
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .master-slide {
+        width: 768px;
+    }
+    .masters-slideButton {
+        width: 768px;
+        margin: auto;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .master-slide {
+        width: 100%;
+    }
+    .masters-slideButton {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .masters-slideButton {
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media  (max-width: 575.98px) {
+    .master-slide {
+        width: 100%;
+    }
+    .masters-slideButton {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10%;
+    }
+}

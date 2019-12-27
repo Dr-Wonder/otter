@@ -1,0 +1,621 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.header-wrapp {
+    width: 100%;
+    background-color: @pink-bg;
+    height: 850px;
+}
+
+
+
+:after,
+:before {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 20px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+.scroll-down-mob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+}
+
+.scroll-down-mob {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-down-mob:before {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 20px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+.header {
+    margin: 0 auto;
+    width: 1140px;
+    height: 100%;
+    &-block {
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    &-navbar {
+        width: 100%;
+        height: 110px;
+        //mobile logo
+        &-mob {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            display: none;
+        }
+        &-desk {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+        }
+    }
+    &-img {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    &-buttons {
+        width: 100%;
+        height: 60px;
+        margin-top: 70px;
+        &-container {
+            margin: auto;
+            width: 250px;
+            height: 60px;
+        }
+    }
+    &-number {
+        width: 100%;
+        height: 120px;
+        &-container {
+            margin: auto;
+            width: 250px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &-social {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        &-links {
+            margin: 0 auto;
+            width: 250px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &-scroll {
+        margin-top: 40px;
+        width: 100%;
+        height: 50px;
+        background-color: @pink-bg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-mobile {
+            width: 100%;
+            height: 50px;
+            background-color: @pink-bg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(235, 87, 87, 0.22);
+    padding-left: 20px;
+    padding-right: 30px;
+    &:hover {
+        color: #fff ;
+        text-decoration: none;
+        transition:  0.5s;
+        box-shadow: 0px 4px 25px rgba(180, 75, 75, 0.247);
+    }
+}
+
+// yclients header button
+.yclients-btn {
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @pink-btn;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(235, 87, 87, 0.22);
+    text-decoration: none;
+    color: #fff;
+    transition:  0.5s;
+    &:hover {
+        color: #fff ;
+        text-decoration: none;
+        transition:  0.5s;
+        box-shadow: 0px 4px 25px rgba(180, 75, 75, 0.247);
+    }
+}
+
+.loc {
+    width: 30%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo-desk {
+    width: 50%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu {
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+.loc {
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(130, 130, 130, 0.39);
+    &:hover {
+        box-shadow: 0px 4px 20px rgba(56, 56, 56, 0.39); 
+        transition:  0.5s;
+    }
+    &-link {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-img {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-text {
+            width: 150px;
+            height: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
+
+
+.menu-btn:hover {
+    cursor: pointer;
+}
+.send-btn-menu {
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: @pink-btn;
+    color: #ffffff;
+    &:hover {
+        cursor: pointer;
+        
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 255, 255); /* Black fallback color */
+    background-color: rgba(255, 255, 255, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 15%; /* 15% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #444444;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #333333;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+@media (min-width: 992px) and (max-width: 1920.98px) { 
+    .header {
+        width: 1140px;
+        &-scroll {
+            margin-top: 40px;
+            width: 100%;
+            height: 50px;
+            background-color: @pink-bg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-mobile {
+                display: none;
+            }
+            .menu-desk {
+                display: block;
+            }
+        }
+    }
+    .header-buttons-mobile {
+        display: none;
+        width: 100%;
+        height: 60px;
+        margin-top: 60px;
+        &-cont {
+            width: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .btn-2 {
+        display: none;
+        width: 30px;
+        height: 30px;
+    }
+ }
+ 
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .header {
+        width: 768px;
+        &-scroll {
+            margin-top: 40px;
+            width: 100%;
+            height: 50px;
+            background-color: @pink-bg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-mobile {
+                display: none;
+            }
+        }
+    }
+    .buttons-mobile {
+        display: none;
+    }
+    .header-buttons-mobile {
+        display: none;
+        width: 100%;
+        height: 60px;
+        margin-top: 60px;
+        &-cont {
+            width: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .btn-2 {
+        display: none;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .header {
+        width: 500px;
+        &-scroll {
+            display: none;
+            &-mobile {
+                width: 100%;
+                height: 50px;
+                background-color: @pink-bg;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+        }
+        &-social {
+            margin-top: 50px;
+        }
+        .buttons-mobile {
+            display: none;
+        }
+    }
+    .header-buttons-mobile {
+        display: none;
+        width: 100%;
+        height: 60px;
+        margin-top: 60px;
+        &-cont {
+            width: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .btn-2 {
+        display: none;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .header-wrapp {
+        height: 600px;
+    }
+    .header {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        &-block {
+            display: flex;
+        }
+        &-img {
+            margin-top: 0;
+        }
+        &-navbar {
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+            height: 110px;
+            //mobile logo
+            &-mob {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 30px;
+                padding-left: 16px;
+                display: none;
+            }
+            &-desk {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding-top: 30px;
+            }
+            &-scroll {
+                display: none;
+                &-mobile {
+                    width: 100%;
+                    height: 50px;
+                    background-color: @pink-bg;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                }
+            }
+        }
+        &-social {
+            margin-top: 0;
+        }
+    }
+    .header-buttons-mobile {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        margin-top: 60px;
+        &-cont {
+            width: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .btn-2 {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .buttons-desck {
+        display: none;
+    }
+    .logo-desk {
+        display: none
+    }
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+    // .menu-desk {
+    //     display: none;
+    // }
+}
